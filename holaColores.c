@@ -2,12 +2,12 @@
 
 
 #define AMARILLO "\033[1;5;3m"
-#define AGUA "\033[1;94m ~"
+#define AGUACOLOR "\033[1;94m ~"
 #define RESET "\033[0m"
 
 #define TLC "┌"
 #define TRC "┐"
-#define HL "─"
+#define HL "───"
 #define LCL "├"
 #define RCL "┤"
 #define CL "┼"
@@ -16,19 +16,23 @@
 #define VL "│"
 #define BLC "└"
 #define BRC "┘"
+#define AGUA " ~ "
+#define TAM 10
+
+void imprimir_tablero(){
+
+	printf( TLC HL TCL HL TRC "\n");
+	printf( VL AGUA VL AGUA VL "\n");	
+	printf(LCL HL CL HL RCL "\n");
+	printf( VL AGUA VL AGUA VL "\n");	
+	printf( BLC HL BCL HL BRC "\n");
+
+}
 
 
 int main (){
 
-	fprintf(stdout,AMARILLO "Amarillo\n" RESET);
-	fprintf(stdout,AGUA RESET);
-	fprintf(stdout, "\nhola   \t \n");
-
-	printf(TLC HL HL HL HL HL HL TRC "\n");
-	printf(VL "      " VL "\n");
-	printf(LCL HL HL HL HL HL HL RCL "\n");
-	printf(VL "      " VL "\n");
-	printf(BLC HL HL HL HL HL HL BRC "\n");
+	imprimir_tablero();
 
 
 
